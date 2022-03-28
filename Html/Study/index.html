@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Study_Html</title>
+	</head>
+	<body>
+		<h1>1 Study 标签</h1>    	<!--h1标题-->
+		<p>                         <!--p段落-->
+			<h2>静夜思</h2>
+			<hr/>
+			床前明月光<br>      		    <!--br换行-->
+			疑是地上霜<br> 
+			<hr >                  		<!--hr分割线-->
+			<em>举头望明月</em> <br>      <!--em斜体-->
+			<strong>低头是故乡</strong>	<!--strong加粗-->
+		</p>
+
+		<h1>2 图片标签</h1>  
+		<!--使用相对路径-->
+		<img src="img/hh.jpg" alt="杨测试" width="100px" height="100px">
+		
+		<h1>3 超文本标签</h1>
+		<a name ="top"></a>
+		<a href="https://edu.csdn.net/learn/35429/526963?spm=1002.2001.3001.4143 " target="_self"> 点我跳转，测试跳转链接</a>
+		
+		<h2>3.1 锚链接（回到某个位置）</h2>
+		<a href="#top">回到3位置</a>
+		
+		<h1>4 特殊符号</h1>  
+		百&nbsp;&nbsp;度<br />   <!--空格-->
+		2&gt;1<br />  <!--大于号-->
+		1&lt;2<br />  <!--小于号-->
+		&quot;小杨&quot;<br />  <!--引号-->
+		&copy;小杨<br />        <!--@-->
+		
+		<h1>5 列表标签</h1>  
+		<ul>
+			<li>第一页</li>
+			<li>第二页</li>
+			<li>第三页</li>
+		</ul>
+		
+		<h1>6 音频元素</h1>  
+		<video width="320" height="240" controls>
+			<source src="video/video.webm" type="video/webm"></source>
+			<source src="video/video.mp4" type="video/mp4"></source>
+			当前浏览器不支持video元素
+		</video><br />
+		
+		<audio controls>
+			<source src="video/video.mp3" type="audio/mp3"></source>
+			<source src="video/video.ogg" type="audio/ogg"></source>
+			当前浏览器不支持audio元素
+		</audio>
+		
+		<h1>7 表格</h1>  
+		<table border="1px" cellspacing="" cellpadding="">
+			<tr><th>Header1</th><th>Header2</th><th>Header3</th></tr>
+			<tr><td>Data1</td><td>Data2</td><td>Data3</td></tr>
+			<tr><td>Data4</td><td>Data5</td><td>Data6</td></tr>
+		</table><br />
+		
+		<!--跨行-->
+		<table border="1px">
+			<tr><td colspan="3">aaa</td></tr>
+			<tr><th>Header1</th><th>Header2</th><th>Header3</th></tr>
+			<tr><td>Data1</td><td>Data2</td><td>Data3</td></tr>
+			<tr><td>Data4</td><td>Data5</td><td>Data6</td></tr>
+		</table><br />
+		
+		<!--跨列-->
+		<table border="1px">
+			<tr>
+				<td rowspan="2">test</td>
+				<td>Data1</td>
+				<td>Data2</td>
+			</tr>
+			<tr>
+				<td>Data3</td>
+				<td>Data4</td>
+			</tr>
+		</table><br />
+		
+		<!--做一个成绩表-->
+		<table border="1px">
+			<tr>
+				<td colspan="3">三年级五班的语文成绩和数学成绩</td>
+			</tr>
+			<tr>
+				<td rowspan="2">白杨</td>
+				<td>语文</td>
+				<td>98</td>
+			</tr>
+			<tr>
+				<td>数学</td>
+				<td>96</td>
+			</tr>
+			<tr>
+				<td rowspan="2">杨晨</td>
+				<td>语文</td>
+				<td>99</td>
+			</tr>
+			<tr>
+				<td>数学</td>
+				<td>88</td>
+			</tr>
+		</table><br />
+		
+		<h1>8 表单</h1>  
+		<form action="result.html" method="post">
+			<p>名字：<input type="text" name="name" disabled="disabled"></p>
+			<p>密码：<input type="" name="password"></p>
+			<!--列表框-->
+			<p>
+				城市：
+				<select name="city">
+					<option value="beijing" selected="selected">北京</option>
+					<option value="xian">西安</option>
+					<option value="nanjing">南京</option>
+				</select><br><br>
+				
+				<input type="radio" name="gender" checked="checked">男<input type="radio" name="gender" >女<br /><br />
+			</p>
+			<!--多行文本框-->
+			</p>
+				备注：
+				<textarea name="showText" rows="2" cols="6"></textarea>
+			<p>
+				<input type="submit" name="submit" value="提交"/>
+				<input type="reset" name="reset" value="重置"/>
+			</p>
+		</form>
+		
+		<h2>8.1 表单应用</h2> 
+		<form action="" method="post">
+			<table>
+				<tr>
+					<td>输入帐号、密码：</td>
+				</tr>
+				<tr>
+					<td>帐号文本框：</td>
+					<td><input type="text" name="name" ></td>
+				</tr>
+				<tr>
+					<td>密码文本框：</td>
+					<td><input type="text" name="password" ></td>
+				</tr>
+				<tr>
+					<td>性别(单选按钮)：</td>
+					<td><input type="radio" name="gender" checked="checked">男
+					<input type="radio" name="gender">女</td>
+				</tr>
+				<tr>
+					<td>爱好(多选按钮)：</td>
+					<td>
+					<input type="checkbox" name="hobby" checked="checked"/>吃
+					<input type="checkbox" name="hobby" />玩
+					<input type="checkbox" name="hobby" />睡
+					</td>
+				</tr>
+				<tr>
+					<td>简历上传(文件域)：</td>
+					<td>
+						<input type="file">
+					</td>
+				</tr>
+				<tr>
+					<td>城市(下拉列表)：</td>
+					<td>
+						<select name="city">
+							<option value="beijing" selected="selected">北京</option>
+							<option value="xian">西安</option>
+							<option value="nanjing">南京</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>个人简介(多行文本框)：</td>
+					<td>
+						<textarea name="showText" rows="2" cols="20"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="submit" name="submit" value="置灰提交" disabled="disabled"/>
+						<input type="submit" name="submit" value="提交"/>
+						<input type="reset" name="reset" value="重置"/>
+						<input type="image" src="img/login.png" width="60px" height="30px" ="100px"/>
+
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
+
+			
